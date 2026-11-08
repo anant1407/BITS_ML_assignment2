@@ -10,8 +10,8 @@ labeled test CSVs using saved pipelines without training on uploaded data.
 
 This repository contains the training workflow, test data, saved models, and
 interactive app. Local planning files are excluded from the submission repository.
-GitHub publication, cloud deployment, and final PDF submission are separate
-subsequent tasks.
+The project is published on GitHub and deployed on Streamlit Community Cloud.
+Final PDF preparation and portal submission remain separate tasks.
 
 ## b. Dataset description
 
@@ -58,6 +58,8 @@ by `diagnosis`. Do not fit models on this CSV.
 [BITS_ML_assignment2 on GitHub](https://github.com/anant1407/BITS_ML_assignment2)
 
 Clone URL: `https://github.com/anant1407/BITS_ML_assignment2.git`.
+
+**Live Streamlit application:** [Open the classifier comparison app](https://bitsmlassignment2git-kinwytsby5hbpxjdukvmtt.streamlit.app/).
 
 ## d. Models used and evaluation
 
@@ -249,7 +251,7 @@ this local verification run.
 
 ## Using the Streamlit app
 
-Run the local app:
+Open the live application linked above, or run the local app:
 
 ```powershell
 .\venv\Scripts\python.exe -m streamlit run app.py
@@ -275,6 +277,28 @@ Only repository-supplied model artifacts are loaded. Model loading is resource
 cached using metadata and artifact content hashes; results are recomputed for
 the current input on reruns. `app.py` and `inference.py` never import the training
 entrypoint or run fitting, parameter search, or dataset downloads.
+
+### Hosted deployment validation
+
+Validated on 8 November 2026 against the public Streamlit Community Cloud app.
+The runtime reports repository `anant1407/bits_ml_assignment2`, branch `main`,
+entrypoint `app.py`, Streamlit 1.67.0, and Python 3.14.10 on Linux. The cloud
+Python 3.14 minor version matches local development; the cloud manages its patch
+release, which differs from the local Python 3.14.3 installation.
+
+All five classifiers' six metric cards and comparison-table values matched
+`results/model_comparison.csv`. The live sample CSV download matched local test
+data, and an actual multipart upload reproduced the same results. Classification
+reports and confusion-matrix images were emitted for every model; the downloaded
+SVM matrix showed 72 true negatives, 0 false positives, 2 false negatives, and
+40 true positives. Comparison and prediction downloads also matched local results.
+Reordered CSV columns preserved results, one-class data displayed AUC as N/A,
+and an invalid upload showed a validation error with prior results cleared.
+
+These checks used public HTTP and Streamlit's normal runtime messages because
+browser access was unavailable. The downloaded SVM chart was visually inspected;
+a full browser layout inspection was not performed. The local validation evidence
+is under the ignored `tmp/deployment-validation/` directory.
 
 ## Files and paths
 

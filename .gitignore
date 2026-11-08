@@ -44,6 +44,9 @@ Thumbs.db
 /results/verification_report.json
 /results/dataset_inspection.json
 
+# Final PDF deliverables are uploaded to the assignment portal separately
+/output/
+
 # Empty-directory scaffolding; real data/model/result files remain eligible
 .gitkeep
 

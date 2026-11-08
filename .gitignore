@@ -1,0 +1,52 @@
+# Local Python environments and caches
+venv/
+.venv/
+env/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# Local secrets and credentials
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+.aws/
+credentials.json
+service-account*.json
+*.pem
+*.key
+
+# Temporary files and local tooling
+tmp/
+temp/
+*.log
+.coverage
+htmlcov/
+.idea/
+.vscode/
+Thumbs.db
+.DS_Store
+
+# Local assignment planning, interpreter selection, and agent configuration
+/task.md
+/plan.md
+/.python-version
+/.agents/
+/.codex/
+/tools/
+
+# Assignment handout and machine-local verification evidence
+/ML_Assignment_2_AIML_26Oct26.pdf
+/results/verification_report.json
+/results/dataset_inspection.json
+
+# Empty-directory scaffolding; real data/model/result files remain eligible
+.gitkeep
+
+# Keep application/training source, requirements.txt, README.md, test_data.csv,
+# saved pipelines and metadata, raw training inputs, and experiment results.
+# Keep tests/ so the README's committed test command works.

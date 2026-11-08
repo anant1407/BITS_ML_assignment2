@@ -1,0 +1,18 @@
+{
+  "dataset": "Breast Cancer Wisconsin (Diagnostic)",
+  "source_url": "https://archive.ics.uci.edu/dataset/17/breast+cancer+wisconsin+diagnostic",
+  "files": {
+    "wdbc.data": {
+      "url": "https://archive.ics.uci.edu/ml/machine-learning-databases/breast-cancer-wisconsin/wdbc.data",
+      "retrieved_at_utc": "2026-11-08T13:51:40.560602+00:00",
+      "sha256": "d606af411f3e5be8a317a5a8b652b425aaf0ff38ca683d5327ffff94c3695f4a",
+      "acquisition": "downloaded from UCI"
+    },
+    "wdbc.names": {
+      "url": "https://archive.ics.uci.edu/ml/machine-learning-databases/breast-cancer-wisconsin/wdbc.names",
+      "retrieved_at_utc": "2026-11-08T13:51:41.366787+00:00",
+      "sha256": "840e04e3f20f8a5b326892f3b9cbc01c4cd6f7e6c597630b701ef6c0ac79f5ef",
+      "acquisition": "downloaded from UCI"
+    }
+  }
+}
